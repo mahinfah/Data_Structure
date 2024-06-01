@@ -13,7 +13,7 @@ void change(int *px)
         int *px = &x;
 
 
-    change(px);
+    change(px); //passing pointer to chnage function 
 
     cout<<x<<endl;
 
