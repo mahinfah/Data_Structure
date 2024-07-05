@@ -1,4 +1,3 @@
- //loading
 #include<iostream>
 using namespace std;
 struct student
@@ -8,10 +7,11 @@ struct student
 };
 
 void show(student s[],int count)
-{
-    cout<<" ID : " <<s[count-1].id<<endl;
-  cout<<" ID : " <<s[count-1].credit<<endl;
-    cout<<" ID : " <<s[count-1].cgpa<<endl;
+{ cout<<endl;
+  cout<<" ID     : " <<s[count].id<<endl;
+  cout<<" credit : " <<s[count].credit<<endl;
+  cout<<" cgpa   : " <<s[count].cgpa<<endl;
+  cout<<" ----------------------------------------------------------"<<endl;
 }
 
 
@@ -23,26 +23,52 @@ int n = 1;
   {
      int a;
       ;
-  cout<<"ADD Info :  1 \n";
-  cout<<"Show :  2 \n";
+  cout<<"ADD Info of student                                                   :   press1\n";
+  cout<<"Show Info for student’s IDs whose CGPA is more than 3.60              :   press2 \n";
+  cout<<"Show Info for student’s IDs who have completed more than 60 credits   :   press3 \n";
+
 cin>>a;
       if(a==1)
       {
-            cout<<"student id               : "<<endl;
+            cout<<"student id               : ";
             cin>>s[count].id;
-             cout<<"student credit complete : "<<endl;
+             cout<<"student credit complete : ";
             cin>>s[count].credit;
-             cout<<"student cgpa            : "<<endl;
+             cout<<"student cgpa            : ";
             cin>>s[count].cgpa;
              count++;
       }
 
       else if(a==2)
-      { cout<<"which student infoshow          : "<<endl;
-      int p;
-      cin>>p;
-          show( s,  p);
+      {
+
+          for(int i = 0 ;i<5;i++){
+
+        if(s[i].cgpa>3.60){
+
+            show( s,  i);
       }
+        }
+
+
+          }
+
+
+
+          else if(a==3)
+      {
+
+          for(int i = 0 ;i<5;i++){
+
+        if(s[i].credit>=60){
+
+            show( s,  i);
+      }
+        }
+
+
+          }
+
 
   }
 
