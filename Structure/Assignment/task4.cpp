@@ -1,9 +1,10 @@
 // problem question
 #include<iostream>
 using namespace std;
+int i=1;
 void show(int a[2][2])
 {
-   cout<<"the matrix are :";
+   cout<<"No "<<i<<" matrix is:";
    cout<<endl;
  for(int i =0 ;i<2;i++)
  {
@@ -14,6 +15,7 @@ void show(int a[2][2])
      }
  cout<<endl;
  }
+ i++;
 }
 
 int sum(int a[2][2],int b[2][2],int c[2][2],int d[2][2])
@@ -25,7 +27,7 @@ int sum(int a[2][2],int b[2][2],int c[2][2],int d[2][2])
  {
      for(int j=0; j<2;j++)
      {
-            cout<<a[i][j]+b[i][j]+c[i][j]+d[i][j]<<"  ";
+            cout<<"  "<<a[i][j]+b[i][j]+c[i][j]+d[i][j]<<"  ";
      }
 cout<<endl;
  }
