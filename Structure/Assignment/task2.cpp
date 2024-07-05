@@ -1,4 +1,5 @@
-//2nd problem 
+
+//2nd problem
 // Declare a structure to represent a complex number (a number having a real part and an imaginary part). Write C++ functions to add, subtract, multiply, and divide two complex numbers.
 #include<iostream>
 using namespace std;
@@ -19,16 +20,16 @@ void task(complexnum s[], int& num1 ,  int& num2 )
 { int p = 1;
 while(p==1)
 {
-    cout<<"Add number                press 1 "<<endl;
+    cout<<"To add two complex number:             press 1 "<<endl;
 
     int n ;
-    cout<<"To show number:           press 2 "<<endl;
+    cout<<"To show number     :                   press 2 "<<endl;
 
   //  cin>>n;
-    cout<<"To sum numbers:           press 3"<<endl;
-    cout<<"To subtract numbers:      press 4"<<endl;
-    cout<<"To multipy numbers:       press 5"<<endl;
-    cout<<"To Divide numbers:        press 6"<<endl;
+    cout<<"To sum numbers     :                   press 3"<<endl;
+    cout<<"To subtract numbers:                   press 4"<<endl;
+    cout<<"To multiply numbers:                   press 6"<<endl;
+    cout<<"Exit                                   press 7"<<endl;
 
      cin>>n;
 
@@ -36,15 +37,15 @@ while(p==1)
 
     if(n==1)
     {
-cout<<"Add 1st real value ";
+cout<<"Add 1st real value   :";
 cin>>s[num1].real;
-cout<<"Add 1st imagine value ";
+cout<<"Add 1st imagine value: ";
 cin>>s[num1].imagine;
 
 
-cout<<"Add 2nd real value ";
+cout<<"Add 2nd real value   :";
 cin>>s[num2].real;
-cout<<"Add 2nd imagine value ";
+cout<<"Add 2nd imagine value: ";
 cin>>s[num2].imagine;
 
 
@@ -60,7 +61,7 @@ cin>>s[num2].imagine;
         sum= s[num1].real + s[num2].real;
         sum2=s[num1].imagine + s[num2].imagine;
 
-        cout<<"THE SUM IS :"<< sum <<"+i"<<sum2<<endl;
+        cout<<"THE value of sum is           :"<< sum <<"+"<<sum2<<"i"<<endl;
     }
      if (n==4)
     {
@@ -68,7 +69,7 @@ cin>>s[num2].imagine;
         sum4= s[num1].real - s[num2].real;
         sum5=s[num1].imagine - s[num2].imagine;
 
-        cout<<"THE SUBTRACTION IS :"<< sum4 <<"+i"<<sum5<<endl;
+        cout<<"The value of subtraction is   :"<< sum4 <<"+"<<sum5<<"i"<<endl;
     }
      if (n==5)
     {
@@ -76,7 +77,7 @@ cin>>s[num2].imagine;
         sum1= s[num1].real * s[num2].real;
         sum3=s[num1].imagine * s[num2].imagine;
 
-        cout<<"THE Multipication IS :"<< sum1 <<"+i"<<sum3<<endl;
+        cout<<"The value of multipication is :"<< sum1 <<"+"<<sum3<<"i"<<endl;
     }
     if (n==6)
     {
@@ -84,11 +85,11 @@ cin>>s[num2].imagine;
         sum6= s[num1].real / s[num2].real;
         sum7=s[num1].imagine / s[num2].imagine;
 
-        cout<<"THE DIVISION IS :"<< sum6 <<"+i"<<sum7<<endl;
+        cout<<"The value of division is      :"<< sum6 <<"+"<<sum7<<"i"<<endl;
     }
     if(n==7)
     {
-        n=1;
+        p=0;
     }
 }
 }
