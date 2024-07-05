@@ -40,15 +40,16 @@ cin>>a;
       }
 
       else if(a==2)
-      {
+         {
 
-          for(int i = 0 ;i<5;i++){
+          for(int i = 0 ;i<5;i++)
+   {
 
-        if(s[i].cgpa>3.60){
-
-            show( s,  i);
-      }
-        }
+        if(s[i].cgpa>3.60)
+          {
+           show( s,  i);
+          }
+  }
 
 
           }
