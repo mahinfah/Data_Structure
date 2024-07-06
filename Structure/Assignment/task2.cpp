@@ -11,6 +11,10 @@ struct complexnum
   {
       cout<<num+1<<"st number: "<<real<<"+"<<imagine<<"i"<<endl;
   }
+    void show2(int num)
+  {
+      cout<<num+1<<"nd number: "<<real<<"+"<<imagine<<"i"<<endl;
+  }
 
 };
 
@@ -53,7 +57,7 @@ cin>>s[num2].imagine;
     if(n==2)
     {
      s[num1].show(num1);
-     s[num2].show(num2);
+     s[num2].show2(num2);
     }
  if (n==3)
     {
