@@ -9,7 +9,7 @@ struct complexnum
   int imagine;
   void show(int num)
   {
-      cout<<num+1<<"st number: "<<real<<"+i"<<imagine<<endl;
+      cout<<num+1<<"st number: "<<real<<"+"<<imagine<<"i"<<endl;
   }
 
 };
