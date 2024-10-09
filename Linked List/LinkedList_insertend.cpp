@@ -1,49 +1,51 @@
-
 #include<iostream>
 using namespace std;
 class Node{
- public:
-    int data;
-    Node *next;
-    Node(int value)
-    {
-        data = value;
-        next=nullptr;
-    }
+public:
+int data;
+Node* next;
+
+Node(int val)
+{
+    data = val;
+    next = nullptr;
+}
 
 };
 int main()
 {
-    Node *Head;
-    Head= nullptr;
-    //cout<<Head->data;
 
-int a[5]={1,2,3,4,5};
-for(int i =0 ;i<5;i++)
-{
+  Node *head;
+  head =nullptr;
+  //creating tail to insert in the end
+  Node *tail = nullptr;
 
-
-  if(Head==nullptr)
+  int a[4]={1,2,3,4};
+int i ;
+  while(i<4)
+ {
+  if(head==nullptr)
+ {
+    head = new Node(a[i]);
+    tail = head;
+ }
+ else
   {
-    Head = new Node(a[i]);
-  }
-  else
-  {
-    Node *temp;
+      Node *temp;
     temp = new Node(a[i]);
-    temp->next = Head;
-    Head = temp;
+    temp=temp->next;
+   // tail=tail->next;
 
   }
+   i++;
+ }
+
+ Node *print = head;
+ while(print!=nullptr)
+ {
+     cout<<print->data<<"  ";
+     print=print->next;
+ }
+
 
 }
-
-Node *print = Head;
-while(print!= nullptr)
-{
-    cout<<print->data<<"   ";
-    print=print->next;
-}
-
-}
-
