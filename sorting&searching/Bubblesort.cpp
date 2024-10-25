@@ -2,30 +2,37 @@
 using namespace std;
 int main()
 {
-    int a [5]={4,2,5,3,1};
-    cout<<"the array is : ";
-    for(int i=0;i<5;i++)
+    int a[5]={3,2,1,44,4};
+
+    cout<<"Before sorting"<<endl;
+    for(int i =0;i<5;i++)
     {
-        cout<<a[i]<<" ";
-    }
-    for(int i = 0 ;i<4;i++)
-    {
-        for(int j = 0;j<4;j++)
-        {
-            if(a[j]>a[j+1])
-            {
-                int temp;
-                temp = a[j];
-                a[j]=a[j+1];
-                a[j+1]=temp;
-            }
-        }
+        cout<<a[i]<<"  ";
+
     }
     cout<<endl;
-//    cout<<"n\";
-    cout<<"sorted array become:  ";
-      for(int i=0;i<5;i++)
+
+
+    for(int i =0;i<5-1;i++)
     {
-        cout<<a[i]<<" ";
+
+         for(int j =0;j<5-i-1;j++)
+         {
+             if(a[j]>a[j+1])
+             {
+                 int temp =a[j];
+                 a[j]=a[j+1];
+                 a[j+1]=temp;
+             }
+
+         }
+
+    }
+
+    cout<<"After sorting:"<<endl;
+
+    for(int i =0;i<5;i++)
+    {
+        cout<<a[i]<<"  ";
     }
 }
