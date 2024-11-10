@@ -23,7 +23,7 @@ void CountingSort(int A[], int B[], int k, int n)
         count[i] = count[i]+count[i-1];
     }
 
-    //
+    //prefix sum 
 
     for(int i = n-1; i>=0; i--)
     {
